@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/avatar.jpg?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/avatar.jpg?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/avatar.jpg?v=7.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="关于技术的点点滴滴">
+<meta name="keywords" content="PWZER,blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PWZER&#39;s Blog">
+<meta property="og:url" content="https://www.deeporz.com/index.html">
+<meta property="og:site_name" content="PWZER&#39;s Blog">
+<meta property="og:description" content="关于技术的点点滴滴">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PWZER&#39;s Blog">
+<meta name="twitter:description" content="关于技术的点点滴滴">
+
+
+
+
+
+
+  <link rel="canonical" href="https://www.deeporz.com/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>PWZER's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">PWZER's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.deeporz.com/2019/02/18/使用SSH实现远程登录和内网穿透/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PWZER">
+      <meta itemprop="description" content="关于技术的点点滴滴">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PWZER's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/18/使用SSH实现远程登录和内网穿透/" class="post-title-link" itemprop="url">使用 SSH 实现远程登录和内网穿透</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-18 10:00:00 / Modified: 10:51:59" itemprop="dateCreated datePublished" datetime="2019-02-18T10:00:00+08:00">2019-02-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/SSH/" itemprop="url" rel="index"><span itemprop="name">SSH</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在开发过程当中经常会碰到这样的需求，通过某一台外网的跳板机器登录到另一台的内网机器上，或者需要直接访问内网机器上的资源, 比如传输文件、访问 web 资源等。</p>
+<p><img src="/uploads/WX20190216-031940.png" alt="图1"></p>
+<p>其实像这种需求有很多种方式可以实现，比如 nginx 反向代理、shadowsocks 代理、iptables 端口转发等等，在这里主要介绍使用 SSH 的端口转发实现。对于服务端的开发人员来说 SSH 简直是神器之一。</p>
+<h2 id="SSH-实现端口转发"><a href="#SSH-实现端口转发" class="headerlink" title="SSH 实现端口转发"></a>SSH 实现端口转发</h2><p>SSH 共提供了三种端口转发，分别是本地转发、远程转发、动态转发。</p>
+<h3 id="本地转发（用-L参数）"><a href="#本地转发（用-L参数）" class="headerlink" title="本地转发（用-L参数）"></a>本地转发（用-L参数）</h3><p>将访问本地主机端口的请求转发到远程主机的端口上，命令形式如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -NL [本地主机]:[本地端口]:[远程主机]:[远程端口] [用户名]@[跳板机]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里的 -N 参数是指，只建立隧道，不执行远程机器的任何命令，如果没有 -N 话同时还会默认登录到主机，或者执行指定命令。</p>
+</blockquote>
+<ul>
+<li><p>场景1</p>
+<p>  <img src="/uploads/9132386693c3ba9d79d8acd1c56b3cc8.jpg" alt="图2"></p>
+<p>  前提是主机A有权限访问 <code>http://10.0.0.2:8888</code>，且终端X有权限登录主机A（10.0.0.1）。<br>  这种情况执行以下命令，把终端X的 9999 端口请求通过主机A转发到远程主机B（10.0.0.2）的 8888 端口上，所以，在终端X的浏览器中直接访问 <code>http://127.0.0.1:9999</code> 即可。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh -NL 0.0.0.0:9999:10.0.0.2:8888 user_a@10.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地主机可以省略</span></span><br><span class="line">ssh -NL 9999:10.0.0.2:8888 user_a@10.0.0.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>场景2</p>
+<p>  <img src="/uploads/882892c67b5155f765accb0e3a0c9d6e.jpg" alt="图3"></p>
+<p>  虽然终端X可以直接登录主机B，但可能由于防火墙、内网服务等因素无法直接访问 <code>http://10.0.1.2:8888</code> 的服务。<br>  这种情况执行以下命令，把终端X的 9999 端口请求转发到远程主机B（10.0.1.2）的 8888 端口上即可，注意这里主机B上有两个网段的 IP 地址，可能是一个外网，一个内网。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh -NL 0.0.0.0:9999:10.0.1.2:8888 user_b@10.0.0.2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地主机可以省略</span></span><br><span class="line">ssh -NL 9999:10.0.1.2:8888 user_b@10.0.0.2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以上两种场景都是终端X把本地主机的请求转发到远程主机，所以称为本地转发。</p>
+<h3 id="远程转发（用-R参数）"><a href="#远程转发（用-R参数）" class="headerlink" title="远程转发（用-R参数）"></a>远程转发（用-R参数）</h3><p>将远程主机端口的请求本地主机转发到内网中的服务端口上，命令形式如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -NR [远程主机监听地址]:[远程主机监听端口]:[内网主机]:[内网端口] [用户名]@[远程主机]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>场景1</p>
+<p>  <img src="/uploads/21861cbbcfd0f308fc36cacfb4291b51.jpg" alt="图4"></p>
+<p>  这里终端X是无法直接访问主机A的 <code>http://10.0.1.1:8888</code> 服务的，也不能访问主机B，只能访问主机C。<br>  主机B是可以登录主机C的，而且主机B能访问主机A的 <code>http://10.0.1.1:8888</code> 服务。<br>  主机C也是无法直接访问主机B和主机A的。</p>
+<p>  这种情况就需要在主机B上配置 SSH 的端口转发，将对主机C的 9999 端口的请求转发到主机A的 8888 端口上。<br>  在这里主机B的功能都是把远程主机端口的请求转发到内网中，所以这种情况称为远程转发。</p>
+<blockquote>
+<ol>
+<li>这里要实现远程转发需要主机C的 sshd_config 开启了 AllowTcpForwarding 选项，否则远程转发会失败。</li>
+<li>远程主机上的端口绑定的是127.0.0.1，如要绑定0.0.0.0的网段，主机C的 sshd_config 需要开启 GatewayPorts 选项。或者在主机C上再用一次本地转发到0.0.0.0网段也是可以的。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="动态转发（用-D参数）"><a href="#动态转发（用-D参数）" class="headerlink" title="动态转发（用-D参数）"></a>动态转发（用-D参数）</h3><p>动态转发其实就是 socks5 代理，跟远程主机建立一条隧道，并在本地监听一个端口，所有经过这个端口的请求都统一发到远程主机上由远程主机代理发起请求。所以这样就可以访问代理主机能访问的而且本身直接访问不了的所有服务, 那样就不需要一个端口一个端口去转发了，而且安全性更高。命令格式如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -ND [本地主机监听地址]:[本地主机监听端口] [用户名]@[远程主机]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>场景1</p>
+<p>  <img src="/uploads/52715bbffba5dbde8a985db5e7b0a91b.jpg" alt="图5"></p>
+<p>  这里终端X只能登录主机A，其它的主机B ~ D 都无法访问。<br>  这个时候如果配置一条动态转发，只要在主机A中能访问的服务，在终端X就能访问，不管是内网还是外网。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -ND user_a@10.0.0.1</span><br></pre></td></tr></table></figure>
+<p>  这种方式如果终端A需要访问主机B ~ D的话，就需要配置走 socks5 的代理方式，比如浏览器访问网页、SSH远程登录等等。</p>
+</li>
+</ul>
+<p>因为这种转发完全不需要考虑具体的要访问的服务，只要能访问的都自动转发，所以称为动态转发。</p>
+<h2 id="通过跳板机直接登录内网主机"><a href="#通过跳板机直接登录内网主机" class="headerlink" title="通过跳板机直接登录内网主机"></a>通过跳板机直接登录内网主机</h2><p>最简单粗暴的方式就是先从终端X登录到主机A，再从主机A登录到主机B，这样的话就非常烦琐，想访问主机B还需要两次登录操作，如果后面还有主机C、主机D，那就需要更多次登录操作了，其实 SSH 提供了更简单的方式可以做到。其实你会发现，只要了解了上面几种端口转发方式，无论是跳板机登录、拷贝文件、或者访问 web 服务，都轻而易举了。</p>
+<ul>
+<li><p>使用 <code>-J</code> 参数的方式</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh -At user_b@10.0.0.2 -J user_a@10.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 中间有多台跳板机器</span></span><br><span class="line">ssh -At user_c@10.0.0.3 -J user_a@10.0.0.1,user_b@10.0.0.2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <code>ProxyCommand</code> 的方式</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -At user_b@10.0.0.2 -o ProxyCommand=<span class="string">"ssh user_a@10.0.0.1 -W %h:%p"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>端口转发的方式</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先配置动态转发</span></span><br><span class="line">ssh -ND localhost:8888 user_a@10.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 登录主机</span></span><br><span class="line">ssh -At -o ProxyCommand=<span class="string">'/usr/bin/nc -X 5 -x localhost:8888 %h %p'</span> user_b@10.0.0.2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>~/.ssh/config</code> 配置文件的方式</p>
+</li>
+</ul>
+<h2 id="使用-scp-或-rsync-命令穿透跳板机器进行文件同步"><a href="#使用-scp-或-rsync-命令穿透跳板机器进行文件同步" class="headerlink" title="使用 scp 或 rsync 命令穿透跳板机器进行文件同步"></a>使用 <code>scp</code> 或 <code>rsync</code> 命令穿透跳板机器进行文件同步</h2><ul>
+<li><p>使用 ProxyCommand 的方式</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scp</span></span><br><span class="line">scp -o <span class="string">"ProxyCommand ssh user_a@10.0.0.1 -W %h:%p"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br><span class="line"></span><br><span class="line"><span class="comment"># rsync</span></span><br><span class="line">rsync -e <span class="string">"ssh -o 'ProxyCommand ssh user_a@10.0.0.1 -W %h:%p'"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br></pre></td></tr></table></figure>
+<p>  其中 <a href="mailto:`user_a@10.0.0.1" target="_blank" rel="noopener">`user_a@10.0.0.1</a><code>是跳板主机，</code><a href="mailto:user_b@10.0.0.2" target="_blank" rel="noopener">user_b@10.0.0.2</a>` 是内网机器。</p>
+</li>
+<li><p>端口转发的方式</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先配置动态转发</span></span><br><span class="line">ssh -ND localhost:8888 user_a@10.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># scp</span></span><br><span class="line">scp -o <span class="string">"ProxyCommand /usr/bin/nc -X 5 -x localhost:8888 %h %p"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br><span class="line"></span><br><span class="line"><span class="comment"># rsync</span></span><br><span class="line">rsync -e <span class="string">"ssh -o 'ProxyCommand /usr/bin/nc -X 5 -x localhost:8888 %h %p'"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.deeporz.com/2019/02/14/Python发送POST请求之multipart_form-data/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PWZER">
+      <meta itemprop="description" content="关于技术的点点滴滴">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PWZER's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/14/Python发送POST请求之multipart_form-data/" class="post-title-link" itemprop="url">Python 发送 POST 请求之 Multipart/form-data</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-14 10:00:00 / Modified: 12:09:34" itemprop="dateCreated datePublished" datetime="2019-02-14T10:00:00+08:00">2019-02-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 HTTP/1.1 协议中，使用 POST 请求提交数据时常用的 Content-Type 有以下几种:</p>
+<ul>
+<li><code>application/x-www-form-urlencoded</code> 原生 Form 默认的提交方式, 最常用的一种，支持GET/POST等方法。主要把数据编码成键值对的方式, 并且把特殊字符转义成 utf-8 字符，如空格会被转义成 %20。</li>
+<li><code>application/json</code> 由于 JSON 格式所表示的结构化数据远比键值对复杂得多，所以使用 JSON 系列化之后的字符串进行数据交换的方式越来越受人们青睐。特别适合 RESTful 类型的接口。</li>
+<li><code>text/xml</code> 使用 <a href="https://en.wikipedia.org/wiki/XML-RPC" target="_blank" rel="noopener">XML-RPC(XML Remote Procedure Call)</a> 协议进行数据传输，相比于 JSON 的方式更为臃肿。</li>
+<li><code>multipart/form-data</code> 使用 Form 提交小文件, 直接把文件内容放在 Body 中进行传输的方式。考虑到同时上传多个字段或文件，所以需要按照一定规则随机生成或手动指定一个 boundary 用于分割数据，然后按照一定格式、顺序进行排列构成完整的 Body 进行传输。(<a href="https://www.ietf.org/rfc/rfc1867.txt" target="_blank" rel="noopener">multipart/form-data 官方定义</a>)</li>
+</ul>
+<h2 id="客户端发送-multipart-form-data-请求"><a href="#客户端发送-multipart-form-data-请求" class="headerlink" title="客户端发送 multipart/form-data 请求"></a>客户端发送 multipart/form-data 请求</h2><p>假设现在有 <code>./file_1.txt</code> 和 <code>./file_2.txt</code> 两个文件，内容分别如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat ./file_1.txt</span></span><br><span class="line"><span class="built_in">test</span> file 1 content!</span><br><span class="line"></span><br><span class="line"><span class="comment"># cat ./file_2.txt</span></span><br><span class="line"><span class="built_in">test</span> file 2 content!</span><br></pre></td></tr></table></figure>
+<h3 id="使用-Requests-实现"><a href="#使用-Requests-实现" class="headerlink" title="使用 Requests 实现"></a>使用 <a href="http://docs.python-requests.org/en/master/" target="_blank" rel="noopener">Requests</a> 实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">data = &#123;<span class="string">'key_1'</span>: <span class="string">'value_1'</span>, <span class="string">'key_2'</span>: <span class="string">'value_2'</span>&#125;</span><br><span class="line"></span><br><span class="line">files = [</span><br><span class="line">    (<span class="string">'file_1'</span>, open(<span class="string">'./file_1.txt'</span>, <span class="string">'rb'</span>)),</span><br><span class="line">    (<span class="string">'file_2'</span>, open(<span class="string">'./file_2.txt'</span>, <span class="string">'rb'</span>)),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">resp = requests.post(<span class="string">'http://127.0.0.1:8000/upload'</span>, data=data, files=files)</span><br><span class="line">print(resp.request.body.decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
+<p>打印出来的 request body 内容是这样的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">--bfa60c05b6631915da313e8fb696e7b2</span><br><span class="line">Content-Disposition: form-data; name=<span class="string">"key_1"</span></span><br><span class="line"></span><br><span class="line">value_1</span><br><span class="line">--bfa60c05b6631915da313e8fb696e7b2</span><br><span class="line">Content-Disposition: form-data; name=<span class="string">"key_2"</span></span><br><span class="line"></span><br><span class="line">value_2</span><br><span class="line">--bfa60c05b6631915da313e8fb696e7b2</span><br><span class="line">Content-Disposition: form-data; name=<span class="string">"file_1"</span>; filename=<span class="string">"file_1.txt"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> file 1 content!</span><br><span class="line"></span><br><span class="line">--bfa60c05b6631915da313e8fb696e7b2</span><br><span class="line">Content-Disposition: form-data; name=<span class="string">"file_2"</span>; filename=<span class="string">"file_2.txt"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">test</span> file 2 content!</span><br><span class="line"></span><br><span class="line">--bfa60c05b6631915da313e8fb696e7b2--</span><br></pre></td></tr></table></figure>
+<p>其中 <code>bfa60c05b6631915da313e8fb696e7b2</code> 就是上面所提到自动生成的 boundary。</p>
+<p>值得注意的是 <code>{&#39;key_1&#39;: &#39;value_1&#39;, &#39;key_2&#39;: &#39;value_2&#39;}</code> 这两个本身是键值对的数据也被自动转成了 <code>multipart/form-data</code> 的编码方式。如果不传 <code>files</code> 字段时，将自动使用 <code>application/x-www-form-urlencoded</code> 的编码方式，所以 request body 内容应该是这样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">key_1=value_1&amp;key_2=value_2</span><br></pre></td></tr></table></figure>
+<p>在 requests 中数据编码时，只有 <code>data</code> 参数为 None 时才会判断使用 <code>json</code> 参数，所以 <code>data</code> 和 <code>json</code> 两个参数同时存在时，只会编码 <code>data</code> 的数据；但 <code>data</code> 和 <code>files</code> 是可以同时存在的，而且只要有 <code>files</code> 存在，其它键值对数据也会一起使用 <code>multipart/form-data</code> 的编码方式生成 body 数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># json 参数将会被忽略</span></span><br><span class="line">resp = requests.post(<span class="string">'http://127.0.0.1:8000/upload'</span>, data=data, json=xxxx)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这样是 OK 的</span></span><br><span class="line">resp = requests.post(<span class="string">'http://127.0.0.1:8000/upload'</span>, data=data, files=files)</span><br></pre></td></tr></table></figure>
+<h3 id="使用-AIOHTTP-实现"><a href="#使用-AIOHTTP-实现" class="headerlink" title="使用 AIOHTTP 实现"></a>使用 <a href="https://aiohttp.readthedocs.io/en/stable/" target="_blank" rel="noopener">AIOHTTP</a> 实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> asyncio</span><br><span class="line"><span class="keyword">import</span> aiohttp</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">send_request</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">with</span> aiohttp.ClientSession() <span class="keyword">as</span> session:</span><br><span class="line">        data = aiohttp.FormData()</span><br><span class="line">        data.add_field(<span class="string">'key_1'</span>, <span class="string">'value_1'</span>)</span><br><span class="line">        data.add_field(<span class="string">'key_2'</span>, <span class="string">'value_2'</span>)</span><br><span class="line">        data.add_field(<span class="string">'file_1'</span>, open(<span class="string">'./file_1.txt'</span>, <span class="string">'rb'</span>), filename=<span class="string">'file_1.txt'</span>,</span><br><span class="line">                       content_type=<span class="string">'multipart/form-data'</span>)</span><br><span class="line">        data.add_field(<span class="string">'file_2'</span>, open(<span class="string">'./file_2.txt'</span>, <span class="string">'rb'</span>), filename=<span class="string">'file_2.txt'</span>,</span><br><span class="line">                       content_type=<span class="string">'multipart/form-data'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">async</span> <span class="keyword">with</span> session.post(<span class="string">'http://127.0.0.1:8000/upload'</span>, data=data) <span class="keyword">as</span> resp:</span><br><span class="line">            print(<span class="keyword">await</span> resp.text())</span><br><span class="line"></span><br><span class="line">asyncio.run(send_request())</span><br></pre></td></tr></table></figure>
+<p>打印出来的 request body 如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">--a63b12cbef044b039c5c788b25a71336</span><br><span class="line">Content-Type: text/plain; charset=utf-8</span><br><span class="line">Content-Disposition: form-data; name=&quot;key_1&quot;</span><br><span class="line">Content-Length: 7</span><br><span class="line"></span><br><span class="line">value_1</span><br><span class="line">--a63b12cbef044b039c5c788b25a71336</span><br><span class="line">Content-Type: text/plain; charset=utf-8</span><br><span class="line">Content-Disposition: form-data; name=&quot;key_2&quot;</span><br><span class="line">Content-Length: 7</span><br><span class="line"></span><br><span class="line">value_2</span><br><span class="line">--a63b12cbef044b039c5c788b25a71336</span><br><span class="line">Content-Type: multipart/form-data</span><br><span class="line">Content-Disposition: form-data; name=&quot;file_1&quot;; filename=&quot;file_1.txt&quot;; filename*=utf-8&apos;&apos;file_1.txt</span><br><span class="line">Content-Length: 21</span><br><span class="line"></span><br><span class="line">test file 1 content!</span><br><span class="line"></span><br><span class="line">--a63b12cbef044b039c5c788b25a71336</span><br><span class="line">Content-Type: multipart/form-data</span><br><span class="line">Content-Disposition: form-data; name=&quot;file_2&quot;; filename=&quot;file_2.txt&quot;; filename*=utf-8&apos;&apos;file_2.txt</span><br><span class="line">Content-Length: 21</span><br><span class="line"></span><br><span class="line">test file 2 content!</span><br><span class="line"></span><br><span class="line">--a63b12cbef044b039c5c788b25a71336--</span><br></pre></td></tr></table></figure>
+<p>可以看到 aiohttp 对键值对默认使用了 <code>Content-Type: text/plain</code>, 即纯文本的方式，这只是不同库的默认值和实现方式有些区别而已。</p>
+<h2 id="服务端解析-multipart-form-data-请求"><a href="#服务端解析-multipart-form-data-请求" class="headerlink" title="服务端解析 multipart/form-data 请求"></a>服务端解析 multipart/form-data 请求</h2><p>这里服务端使用 <code>Sanic</code> 框架接收数据请求，<code>Sanic</code> 是 <code>python3</code> 中性能非常好异步无阻塞的 web 框架，特别是跟 <code>uvloop</code> 配合着使用，性能上可以发挥到极致。用法跟<code>Flask</code>非常类似。项目主页: <a href="https://github.com/huge-success/sanic" target="_blank" rel="noopener">https://github.com/huge-success/sanic</a>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sanic <span class="keyword">import</span> Sanic, response</span><br><span class="line"></span><br><span class="line">app = Sanic(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.post('/upload')</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">upload_handler</span><span class="params">(request)</span>:</span></span><br><span class="line">    print(<span class="string">'request.files'</span>, request.files)</span><br><span class="line">    print(<span class="string">'request.form'</span>, request.form)</span><br><span class="line">    <span class="keyword">return</span> response.text(<span class="string">'ok'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run(host=<span class="string">'0.0.0.0'</span>, port=<span class="number">8000</span>)</span><br></pre></td></tr></table></figure>
+<p>输出信息如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">request.files &#123;&apos;file_1&apos;: [File(type=&apos;multipart/form-data&apos;, body=b&apos;test file 1 content!\n&apos;, name=&apos;file_1.txt&apos;)], &apos;file_2&apos;: [File(type=&apos;multipart/form-data&apos;, body=b&apos;test file 2 content!\n&apos;, name=&apos;file_2.txt&apos;)]&#125;</span><br><span class="line">request.form &#123;&apos;key_1&apos;: [&apos;value_1&apos;], &apos;key_2&apos;: [&apos;value_2&apos;]&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="PWZER">
+            
+              <p class="site-author-name" itemprop="name">PWZER</p>
+              <p class="site-description motion-element" itemprop="description">关于技术的点点滴滴</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/PWZER" title="GitHub &rarr; https://github.com/PWZER" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:pwzergo@gmail.com" title="E-Mail &rarr; mailto:pwzergo@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">粤ICP备18128464号-1 </a>&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PWZER</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('3');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.0"></script>
+
+
+  
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('Copied');
+          else $(this).text('Copy failed');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('Copy');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+</body>
+</html>
