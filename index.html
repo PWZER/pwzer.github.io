@@ -414,12 +414,24 @@
                 
               
 
-              <time title="Created: 2019-02-18 10:00:00 / Modified: 10:51:59" itemprop="dateCreated datePublished" datetime="2019-02-18T10:00:00+08:00">2019-02-18</time>
+              <time title="Created: 2019-02-18 10:00:00" itemprop="dateCreated datePublished" datetime="2019-02-18T10:00:00+08:00">2019-02-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-02-20 12:08:14" itemprop="dateModified" datetime="2019-02-20T12:08:14+08:00">2019-02-20</time>
               
             
           </span>
@@ -538,7 +550,7 @@
 <h2 id="使用-scp-或-rsync-命令穿透跳板机器进行文件同步"><a href="#使用-scp-或-rsync-命令穿透跳板机器进行文件同步" class="headerlink" title="使用 scp 或 rsync 命令穿透跳板机器进行文件同步"></a>使用 <code>scp</code> 或 <code>rsync</code> 命令穿透跳板机器进行文件同步</h2><ul>
 <li><p>使用 ProxyCommand 的方式</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scp</span></span><br><span class="line">scp -o <span class="string">"ProxyCommand ssh user_a@10.0.0.1 -W %h:%p"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br><span class="line"></span><br><span class="line"><span class="comment"># rsync</span></span><br><span class="line">rsync -e <span class="string">"ssh -o 'ProxyCommand ssh user_a@10.0.0.1 -W %h:%p'"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br></pre></td></tr></table></figure>
-<p>  其中 <a href="mailto:`user_a@10.0.0.1" target="_blank" rel="noopener">`user_a@10.0.0.1</a><code>是跳板主机，</code><a href="mailto:user_b@10.0.0.2" target="_blank" rel="noopener">user_b@10.0.0.2</a>` 是内网机器。</p>
+<p>  其中 <code>10.0.0.1</code> 是跳板主机，<code>10.0.0.2</code> 是内网机器。</p>
 </li>
 <li><p>端口转发的方式</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先配置动态转发</span></span><br><span class="line">ssh -ND localhost:8888 user_a@10.0.0.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># scp</span></span><br><span class="line">scp -o <span class="string">"ProxyCommand /usr/bin/nc -X 5 -x localhost:8888 %h %p"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br><span class="line"></span><br><span class="line"><span class="comment"># rsync</span></span><br><span class="line">rsync -e <span class="string">"ssh -o 'ProxyCommand /usr/bin/nc -X 5 -x localhost:8888 %h %p'"</span> user_b@10.0.0.2:/path/to/file ./out/</span><br></pre></td></tr></table></figure>
@@ -1389,6 +1401,21 @@
   
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; 
+      }
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
 
   
 
