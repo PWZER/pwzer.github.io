@@ -369,6 +369,194 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.deeporz.com/2019/05/04/Mac磁盘剩余空间问题/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="PWZER">
+      <meta itemprop="description" content="关于技术的点点滴滴">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PWZER's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/04/Mac磁盘剩余空间问题/" class="post-title-link" itemprop="url">Mac磁盘剩余空间问题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-04 10:00:00" itemprop="dateCreated datePublished" datetime="2019-05-04T10:00:00+08:00">2019-05-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-05 15:15:12" itemprop="dateModified" datetime="2019-05-05T15:15:12+08:00">2019-05-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Mac/" itemprop="url" rel="index"><span itemprop="name">Mac</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近发现 Mac 中的磁盘剩余空间不足，使用 <code>df -h</code> 命令一看，确实满了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/disk1s1    113G   90G   23G  20% /</span><br></pre></td></tr></table></figure>
+<p>然后再用 <code>du -sh /*</code> 看了一下，总感觉哪里不对劲，累加起来的总和只有 40+G，跟上面的统计结果相差太大了。第一时间怀疑是 <code>sparse file</code> 导致的，但是这种文件一般是虚拟机相关软件才可能生成和用到，可我并没有用这方面的软件，所以排除了这种可能。</p>
+<p>然后在 “About this Mac” -&gt; “Storage” 中查看，发现 Available 也有 71G。这说明 df 命令统计结果是存在问题的。</p>
+<p>Google 上查了半天，很多人说跟 Time Machine 有关系，但是我明明配置的是一个外置磁盘，为什么还会占用我 Mac 本机的空间呢？<br>最后查了一下 <a href="https://support.apple.com/en-us/HT201250" target="_blank" rel="noopener">Apple 的官方说明</a>，原文如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If you enter Time Machine when your backup disk isn&apos;t available, Time Machine automatically uses local snapshots to help you restore files. Reconnect your backup disk to make even more backups available.</span><br></pre></td></tr></table></figure>
+<p>既然这样，那问题根源是找到了。然后就看怎么释放空间了。</p>
+<p>查看本机中所有的 snapshots</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tmutil listlocalsnapshots /</span><br></pre></td></tr></table></figure>
+<p>输出如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">com.apple.TimeMachine.2019-02-27-224710</span><br><span class="line">com.apple.TimeMachine.2019-05-05-102956</span><br><span class="line">com.apple.TimeMachine.2019-05-05-113117</span><br><span class="line">com.apple.TimeMachine.2019-05-05-123023</span><br><span class="line">com.apple.TimeMachine.2019-05-05-133415</span><br></pre></td></tr></table></figure>
+<p>把不需要的 snapshots 都删除掉，我这边是全部删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo tmutil deletelocalsnapshots 2019-02-27-224710</span><br><span class="line">sudo tmutil deletelocalsnapshots 2019-05-05-102956</span><br><span class="line">sudo tmutil deletelocalsnapshots 2019-05-05-113117</span><br><span class="line">sudo tmutil deletelocalsnapshots 2019-05-05-123023</span><br><span class="line">sudo tmutil deletelocalsnapshots 2019-05-05-133415</span><br></pre></td></tr></table></figure>
+<p>然后再用 <code>df -h</code> 看看，输出如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/disk1s1    113G   40G   72G  36% /</span><br></pre></td></tr></table></figure>
+<p>这样看上去是正常了，问题解决了!</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.deeporz.com/2019/02/18/使用SSH实现远程登录和内网穿透/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -827,7 +1015,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -844,7 +1032,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
@@ -879,7 +1069,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
